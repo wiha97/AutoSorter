@@ -1,0 +1,29 @@
+﻿<Window x:Class="AutoSorter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoSorter"
+        mc:Ignorable="d"
+        Title="Auto Sorter" Height="450" Width="383" Background="#363636">
+    <Grid>
+        <ScrollViewer Margin="10,81,0,10" HorizontalAlignment="Left" Width="358">
+            <StackPanel x:Name="stacky"/>
+        </ScrollViewer>
+        <Label x:Name="label" Content="No specified program detected" Foreground="Gray" VerticalAlignment="Top" Height="29" Margin="10,0,0,0" HorizontalAlignment="Left" Width="242"/>
+        <TextBox x:Name="procBox" HorizontalAlignment="Left" Height="23" Margin="227,25,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="126" Background="#303030" Foreground="Gray"/>
+        <TextBox x:Name="srcBox" HorizontalAlignment="Left" Height="23" Margin="17,25,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="205" Background="#303030" Foreground="Gray"/>
+        <Button x:Name="procBtn" Content="Add process" Foreground="Gray" Background="#323232" HorizontalAlignment="Left" Margin="227,53,0,0" VerticalAlignment="Top" Width="77" Click="procBtn_Click"/>
+        <RadioButton x:Name="saved" Content="Check Saved" Foreground="Gray" Background="#363636" HorizontalAlignment="Left" Margin="17,48,0,0" VerticalAlignment="Top" Checked="saved_Checked"/>
+        <RadioButton x:Name="all" Content="Check all" Foreground="Gray" Background="#363636" HorizontalAlignment="Left" Margin="17,61,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="procBtn_Copy" Content="Save path" Foreground="Gray" Background="#323232" HorizontalAlignment="Left" Margin="162,53,0,0" VerticalAlignment="Top" Width="60" Click="procBtn_Click"/>
+        <Button x:Name="getProc" Content="Get" Foreground="Gray" Background="#323232" HorizontalAlignment="Left" Margin="309,53,0,0" VerticalAlignment="Top" Width="44" Click="getProc_Click"/>
+        <Expander x:Name="expander" Header="Auto" Height="62" Margin="292,1,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="93">
+            <StackPanel Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="84" Background="#323232">
+                <CheckBox x:Name="autoBox" Content="Auto procs" Foreground="Gray" Background="#363636" Checked="autoBox_Checked" Unchecked="autoBox_Unchecked"/>
+                <CheckBox x:Name="autoFile" Content="Auto files" Foreground="Gray" Background="#363636" Checked="autoFile_Checked" Unchecked="autoFile_Unchecked"/>
+            </StackPanel>
+        </Expander>
+
+    </Grid>
+</Window>
